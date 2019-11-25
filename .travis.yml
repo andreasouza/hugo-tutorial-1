@@ -1,0 +1,12 @@
+install:
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.59.1/hugo_0.59.1_Windows-64bit.zip
+  - sudo dpkg -i hugo*.deb
+  - hugo version
+before_script:
+  - rm -rf public
+script:
+  - hugo
+branch:
+   only:
+     - master
+  
